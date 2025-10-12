@@ -1,13 +1,13 @@
 # Data-Cleaning-SQL-Project-
 
 # Table of Contents
-- Introduction
-- Data Sources
-- Data Preprocessing
-- Analysis Methods
-- Results
-- Conclusions
-- Technologies Used
+- [Introduction](https://github.com/SochimaOkafor/Data-Cleaning-SQL-Project-/edit/main/README.md#introduction)
+- [Data Sources](https://github.com/SochimaOkafor/Data-Cleaning-SQL-Project-/edit/main/README.md#data-sources)
+- [Data Preprocessing](https://github.com/SochimaOkafor/Data-Cleaning-SQL-Project-/edit/main/README.md#data-preprocessing)
+- [Analysis Methods](https://github.com/SochimaOkafor/Data-Cleaning-SQL-Project-/edit/main/README.md#analysis-methods)
+- [Results](https://github.com/SochimaOkafor/Data-Cleaning-SQL-Project-/edit/main/README.md#analysis-methods)
+- [Conclusions](https://github.com/SochimaOkafor/Data-Cleaning-SQL-Project-/edit/main/README.md#conclusions)
+- [Technologies Used](https://github.com/SochimaOkafor/Data-Cleaning-SQL-Project-/edit/main/README.md#technologies-used)
 
 # Introduction
 
@@ -34,14 +34,11 @@ It contains several columns such as:
 The raw dataset contained various inconsistencies that needed cleaning before it could be analyzed. Below are the detailed steps performed using SQL:
 
 1. **Handling Missing Data**
-
-Identified missing values using conditional queries (WHERE column_name IS NULL).
-
-Replaced or removed missing entries depending on their importance to the dataset.
+- Identified missing values using conditional queries (WHERE column_name IS NULL).
+- Replaced or removed missing entries depending on their importance to the dataset.
 
 2. **Removing Duplicates**
-
-Used ROW_NUMBER() and Common Table Expressions (CTEs) to identify and remove duplicate records:
+- Used ROW_NUMBER() and Common Table Expressions (CTEs) to identify and remove duplicate records:
 ```sql
 WITH duplicate_cte AS (
   SELECT *,
@@ -52,22 +49,18 @@ DELETE FROM duplicate_cte WHERE row_num > 1;
 ```
 
 3. **Standardizing Formats**
-
 - Converted inconsistent date formats into a uniform YYYY-MM-DD format using CONVERT() or CAST().
 - Standardized country names and text cases using string functions like UPPER() or LOWER().
 
 4. **Handling Outliers and Invalid Data**
-
 - Checked for invalid entries in numeric fields (e.g., negative Amount_Spent) and replaced or removed them.
 - Verified date ranges to ensure data consistency (e.g., no future purchase dates).
 
 5. **Creating New Useful Fields**
-
 - Extracted year or month from Date_of_Purchase for temporal analysis.
 - Calculated total spending per customer using aggregation functions like SUM() and GROUP BY.
 
 # Analysis Methods
-
 While the primary goal of this project was data cleaning, several exploratory SQL queries were used to assess the dataset’s quality and patterns:
 
 **Data Profiling:**
@@ -79,7 +72,7 @@ While the primary goal of this project was data cleaning, several exploratory SQ
 - Validating data relationships between tables, if applicable.
 
 **Key SQL Functions Used:**
-ROW_NUMBER(), GROUP BY, HAVING, CASE WHEN, CONVERT(), TRIM(), LOWER(), COUNT(), SUM(), AVG(), DISTINCT.
+- ROW_NUMBER(), GROUP BY, HAVING, CASE WHEN, CONVERT(), TRIM(), LOWER(), COUNT(), SUM(), AVG(), DISTINCT.
 
 # Results
 
@@ -100,7 +93,7 @@ SELECT COUNT(DISTINCT Customer_ID) FROM cleaned_data;
 - Structured queries can handle missing values, duplicates, and inconsistencies even in large datasets.
 - Clean data ensures reliability and accuracy in downstream analytics and reporting.
 
-# Limitations & Future Work
+**Limitations & Future Work**
 - The current project focuses on cleaning static data; future work can involve automating data cleaning pipelines using stored procedures or ETL tools.
 - Integration with Python or Power BI could enhance analysis and visualization after cleaning.
 
