@@ -1,14 +1,4 @@
 # Data-Cleaning-SQL-Project-
-
-# Table of Contents
-- [Introduction](https://github.com/SochimaOkafor/Data-Cleaning-SQL-Project-/edit/main/README.md#introduction)
-- [Data Sources](https://github.com/SochimaOkafor/Data-Cleaning-SQL-Project-/edit/main/README.md#data-sources)
-- [Data Preprocessing](https://github.com/SochimaOkafor/Data-Cleaning-SQL-Project-/edit/main/README.md#data-preprocessing)
-- [Analysis Methods](https://github.com/SochimaOkafor/Data-Cleaning-SQL-Project-/edit/main/README.md#analysis-methods)
-- [Results](https://github.com/SochimaOkafor/Data-Cleaning-SQL-Project-/edit/main/README.md#analysis-methods)
-- [Conclusions](https://github.com/SochimaOkafor/Data-Cleaning-SQL-Project-/edit/main/README.md#conclusions)
-- [Technologies Used](https://github.com/SochimaOkafor/Data-Cleaning-SQL-Project-/edit/main/README.md#technologies-used)
-
 # Introduction
 
 Data cleaning is one of the most critical steps in any data analysis or data science project. Inconsistent, incomplete, or duplicate data can lead to misleading insights and poor decision-making.
