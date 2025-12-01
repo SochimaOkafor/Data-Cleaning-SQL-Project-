@@ -41,14 +41,9 @@ DELETE FROM duplicate_cte WHERE row_num > 1;
 3. **Standardizing Formats**
 - Converted inconsistent date formats into a uniform YYYY-MM-DD format using CONVERT() or CAST().
 - Standardized country names and text cases using string functions like UPPER() or LOWER().
+<img width="1093" height="395" alt="image" src="https://github.com/user-attachments/assets/2049a2e2-07ad-4f0d-b56a-04fb81725a17" />
 
-4. **Handling Outliers and Invalid Data**
-- Checked for invalid entries in numeric fields (e.g., negative Amount_Spent) and replaced or removed them.
-- Verified date ranges to ensure data consistency (e.g., no future purchase dates).
 
-5. **Creating New Useful Fields**
-- Extracted year or month from Date_of_Purchase for temporal analysis.
-- Calculated total spending per customer using aggregation functions like SUM() and GROUP BY.
 
 # Analysis Methods
 While the primary goal of this project was data cleaning, several exploratory SQL queries were used to assess the dataset’s quality and patterns:
