@@ -23,11 +23,8 @@ It contains several columns such as:
 
 The raw dataset contained various inconsistencies that needed cleaning before it could be analyzed. Below are the detailed steps performed using SQL:
 
-1. **Handling Missing Data**
-- Identified missing values using conditional queries (WHERE column_name IS NULL).
-- Replaced or removed missing entries depending on their importance to the dataset.
 
-2. **Removing Duplicates**
+1. **Removing Duplicates**
 - Used ROW_NUMBER() and Common Table Expressions (CTEs) to identify and remove duplicate records:
 ```sql
 WITH duplicate_cte AS (
@@ -38,7 +35,7 @@ WITH duplicate_cte AS (
 DELETE FROM duplicate_cte WHERE row_num > 1;
 ```
 
-3. **Standardizing Formats**
+2. **Standardizing Formats**
 - Converted inconsistent date formats into a uniform YYYY-MM-DD format using CONVERT() or CAST().
 - Standardized country names and text cases using string functions like UPPER() or LOWER().
 <img width="1093" height="395" alt="image" src="https://github.com/user-attachments/assets/2049a2e2-07ad-4f0d-b56a-04fb81725a17" />
